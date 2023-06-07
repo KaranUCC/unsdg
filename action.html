@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UNSDG</title>
+<link rel="shortcut icon" type="image/png" href="unsdg_1.png"/>
+
+<!-- Meta tag for responsive design -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+/* CSS styles for the body */
+body {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 0;
+}
+
+/* CSS styles for the sidebar */
+.sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  padding-top: 60px;
+}
+
+/* CSS styles for the sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #818181;
+}
+
+/* CSS styles for the main content */
+#main {
+  margin-left: 300px;
+  padding: 16px;
+}
+
+#main h1 {
+  text-align: center;
+}
+
+#main h2 {
+  text-align: center;
+  font-weight: normal;
+}
+
+/* CSS styles for the horizontal line */
+hr.solid {
+  border-top: 1px solid #000000;
+}
+
+/* CSS styles for the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* CSS styles for the foundation boxes */
+.foundation-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.foundation-box img {
+  width: 150px;
+  height: 150px;
+}
+
+.foundation-box h3 {
+  margin-top: 10px;
+}
+
+.foundation-box p {
+  margin: 10px 0;
+}
+
+.foundation-box .donate-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<!-- Sidebar -->
+<div id="mySidebar" class="sidebar">
+  <a href="goal14.html">Goal 14</a>
+  <a href="goal15.html">Goal 15</a>
+  <a href="quiz.html">Quiz</a>
+  <a href="comparison.html">Comparison</a>
+  <a href="action.html">Action</a>
+</div>
+
+<!-- Image container with link -->
+<a href="https://sdgs.un.org/goals/goal14" target="_blank">
+  <div id="image-container">
+      <img src="unsdg_1.png" alt="Image" width="50" height="50">
+  </div>
+</a>
+
+<!-- Main content -->
+<div id="main">
+    <h1>Steps You Can Take</h1>
+    <h2>Here is a list of foundations you can donate to that are tackling these problems</h2>
+    <hr class="solid">
+
+    <!-- Foundation Box 1 -->
+    <div class="foundation-box">
+      <img src="foundation1.png" alt="Foundation 1">
+      <h3>Blue Chip Foundation</h3>
+      <p>At Blue Chip Foundation, our philosophy of achieving sustainable development includes spearheading multi-stakeholder, large-scale global initiatives and partnerships to advance the 2030 Agenda for Sustainable Development.</p>
+      <button onclick="window.location.href='https://www.bluechipfoundation.org/donate-blue-chip-foundation-charities';" class="donate-button">Donate</button>
+    </div>
+
+    <!-- Foundation Box 2 -->
+    <div class="foundation-box">
+      <img src="foundation2.jpeg" alt="Foundation 2">
+      <h3>Funding the Ocean</h3>
+      <p>FundingtheOcean.org is an online knowledge hub designed to track, inform and inspire ocean conservation philanthropy.</p>
+      <button onclick="window.location.href='https://fundingtheocean.org/funding-map/';" class="donate-button">Donate</button>
+    </div>
+
+    <!-- Foundation Box 3 -->
+    <div class="foundation-box">
+      <img src="foundation3.png" alt="Foundation 3">
+      <h3>World Wildlife Fund</h3>
+      <p>As the worlds leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.</p>
+      <button onclick="window.location.href='https://www.worldwildlife.org/about/';" class="donate-button">Donate</button>
+    </div>
+
+    <!-- Foundation Box 4 -->
+    <div class="foundation-box">
+      <img src="foundation4.png" alt="Foundation 4">
+      <h3>WILD Foundation</h3>
+      <p>With nearly 50 years global experience mobilizing international coalitions for the protection of wilderness, working in over 40 countries, WILD has substantial reach. Each year we draw on this reach to expand and strengthen to protect and defend our wild Earth.</p>
+      <button onclick="window.location.href='https://wild.org/donate/';" class="donate-button">Donate</button>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>Karan Maheshwari Y9 Coding Project</p>
+</footer>
+</body>
+</html>

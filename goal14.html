@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UNSDG</title>
+<link rel="shortcut icon" type="image/png" href="unsdg_1.png"/>
+
+<!-- Meta tag for responsive design -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+/* CSS styles for the webpage */
+
+/* Body styles */
+body {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 0;
+}
+
+/* Sidebar styles */
+.sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #818181;
+}
+
+/* Main content styles */
+#main {
+  margin-left: 300px;
+  padding: 16px;
+}
+
+#main h1 {
+  text-align: center;
+}
+
+#main h2 {
+  text-align: center;
+  font-weight: normal;
+}
+
+#image-container {
+  float: right;
+  margin-right: 150px;
+  margin-top: 60px; /* Adjust the margin-top value as needed */
+}
+
+#image-container img {
+  max-width: 300px;
+}
+
+hr.solid {
+  border-top: 1px solid #000000;
+}
+
+/* Fact box styles */
+#fact-box {
+  border: 2px solid #ccc;
+  padding: 20px;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#fact-box img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+#fact-box button {
+  margin-top: 10px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+</style>
+</head>
+<body>
+<!-- Sidebar -->
+<div id="mySidebar" class="sidebar">
+  <a href="goal14.html">Goal 14</a>
+  <a href="goal15.html">Goal 15</a>
+  <a href="quiz.html">Quiz</a>
+  <a href="comparison.html">Comparison</a>
+  <a href="action.html">Action</a>
+</div>
+
+<!-- Logo and link to external page -->
+<a href="https://sdgs.un.org/goals/goal14" target="_blank">
+  <div id="image-container">
+      <img src="unsdg_1.png" alt="Image" width="50" height="50">
+  </div>
+</a>
+
+<!-- Main content -->
+<div id="main">
+    <h1>Goal 14: Life Below Water</h1>
+    <h2>Conserve and sustainably use the oceans, seas and marine resources for sustainable development</h2>
+    <hr class="solid">
+    <a href="https://sdgs.un.org/goals/goal14" target="_blank">
+        <div id="image-container">
+            <img src="goal14.png" alt="Image">
+        </div>
+    </a>
+    <h3 style="padding-top: 20px; padding-left: 40px;">What is Goal 14?</h3>
+    <p>Goal 14 (Life Below Water) is a goal aimed at protecting and responsibly using our oceans, seas, and marine resources. This goal recognizes the challenges we face including pollution, overfishing, habitat destruction, and climate change. To address these issues, the targets of Goal 14 focus on conserving marine ecosystems, promoting sustainable fisheries management, reducing marine pollution, preserving marine biodiversity, and supporting small-scale fisheries. Goal 14 aims to ensure the long-term health of our oceans for the benefit of current and future generations of humans and marine animals.</p>
+    <h3 style="padding-top: 20px; padding-left: 40px;">Why is Goal 14 Important?</h3>
+    <p>It is crucial because oceans provide livelihoods for millions, regulate the Earth's climate, and host incredible biodiversity. Protecting and managing marine ecosystems ensures food security, supports sustainable economic development, and mitigates climate change impacts</p>
+    <hr class="solid">
+</div>
+
+<!-- Graph section -->
+<div id="graph">
+  <img src="goal14graph.jpeg" style="padding-left: 250px; padding-top: 50px;">
+  <h4 style="text-align: center;">This graph shows the microplastic abundance in Eastern Tropical Pacific since 2008 and its prediction for 2100</h4>
+  <hr class="solid">
+  <h2 style="text-align: center; margin-top:30px;">Facts about life below water</h2>
+</div>
+
+<!-- Fact box section -->
+<div id="fact-box">
+  <img id="fact-image" src="" alt="Water Image">
+  <p id="fact-text"></p>
+  <button id="new-fact-button">Generate New Fact</button>
+  <a id="source-link" href="" target="_blank">Source</a>
+</div>
+
+<!-- Footer section -->
+<footer>
+  <p>Karan Maheshwari Y9 Coding Project</p>
+</footer>
+
+<script>
+  // Array of water facts
+  var waterFacts = [
+    {
+      text: "The ocean is Earth's largest ecosystem",
+      image: "14fact1.avif",
+      source: "https://sdgs.un.org/goals/goal14"
+    },
+    {
+      text: "The ocean absorbs 1/4 of global annual CO2 emmisions",
+      image: "14fact2.png",
+      source: "https://sdgs.un.org/goals/goal14"
+    },
+    {
+      text: "17+ million metric tons of plastic entered the ocean in 2021",
+      image: "14fact3.webp",
+      source: "https://sdgs.un.org/goals/goal14"
+    },
+    {
+      text: "Each year 1.2 trillion gallons of untreated sewage, storm water, and industrial waste are dumped into US water",
+      image: "14fact4.jpeg",
+      source: "https://www.plainvillect.com/water-pollution-control-facility/pages/interesting-facts-about-water-pollution#:~:text=Each%20year%201.2%20trillion%20gallons,population%20of%206.8%20billion%20people."
+    },
+    {
+      text: "Approximately 40% of the lakes in America are too polluted for fishing, aquatic life, or swimming",
+      image: "14fact5.webp",
+      source: "https://www.plainvillect.com/water-pollution-control-facility/pages/interesting-facts-about-water-pollution#:~:text=Each%20year%201.2%20trillion%20gallons,population%20of%206.8%20billion%20people."
+    },
+  ];
+
+  // Get elements from the DOM
+  var factBox = document.getElementById("fact-box");
+  var factImage = document.getElementById("fact-image");
+  var factText = document.getElementById("fact-text");
+  var sourceLink = document.getElementById("source-link");
+  var newFactButton = document.getElementById("new-fact-button");
+
+  // Function to generate a random fact
+  function getRandomFact() {
+    var randomFact = waterFacts[Math.floor(Math.random() * waterFacts.length)];
+
+    // Update the fact box with the random fact
+    factImage.src = randomFact.image;
+    factText.textContent = randomFact.text;
+    sourceLink.href = randomFact.source;
+  }
+
+  // Call the getRandomFact function to display an initial random fact
+  getRandomFact();
+
+  // Add event listener to the "Generate New Fact" button
+  newFactButton.addEventListener("click", getRandomFact);
+</script>
+</body>
+</html>

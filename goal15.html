@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UNSDG</title>
+<link rel="shortcut icon" type="image/png" href="unsdg_1.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* CSS styles for the webpage */
+
+/* Sets the font family for the entire page */
+body {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 0;
+}
+
+/* Styles for the sidebar navigation */
+.sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #818181;
+}
+
+/* Styles for the main content area */
+#main {
+  margin-left: 300px;
+  padding: 16px;
+}
+
+#main h1 {
+  text-align: center;
+}
+
+#main h2 {
+  text-align: center;
+  font-weight: normal;
+}
+
+#image-container {
+  float: right;
+  margin-right: 150px;
+  margin-top: 60px; /* Adjust the margin-top value as needed */
+}
+
+#image-container img {
+  max-width: 300px;
+}
+
+hr.solid {
+  border-top: 1px solid #000000;
+}
+
+#fact-box {
+  border: 2px solid #ccc;
+  padding: 20px;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#fact-box img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+#fact-box button {
+  margin-top: 10px;
+}
+
+/* Styles for the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+</style>
+</head>
+<body>
+<!-- Sidebar navigation -->
+<div id="mySidebar" class="sidebar">
+  <a href="goal14.html">Goal 14</a>
+  <a href="goal15.html">Goal 15</a>
+  <a href="quiz.html">Quiz</a>
+  <a href="comparison.html">Comparison</a>
+  <a href="action.html">Action</a>
+</div>
+
+<!-- Link to the external webpage -->
+<a href="https://sdgs.un.org/goals/goal15" target="_blank">
+  <div id="image-container">
+      <img src="unsdg_1.png" alt="Image" width="50" height="50">
+  </div>
+</a>
+
+<div id="main">
+    <!-- Heading for Goal 15 -->
+    <h1>Goal 15: Life On Land</h1>
+    <!-- Description of Goal 15 -->
+    <h2>Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss</h2>
+    <hr class="solid">
+    <!-- Link to Goal 14 webpage -->
+    <a href="https://sdgs.un.org/goals/goal14" target="_blank">
+        <div id="image-container">
+            <img src="goal155.png" alt="Image">
+        </div>
+    </a>
+    <!-- Heading and content section -->
+    <h3 style="padding-top: 20px; padding-left: 40px;">What is Goal 15?</h3>
+    <p>Goal 15 (Life on Land) is a goal aimed at preserving the precious ecosystems, forests, and biodiversity that exist on our planet. It's a response to the challenges we face, like deforestation, habitat loss, and the decline of wildlife. The targets of Goal 15 include conserving forests and biodiversity, promoting sustainable land management practices, fighting against wildlife trafficking, ensuring fair sharing of resources, and creating global cooperation for sustainable development.</p>
+    <!-- Heading and content section -->
+    <h3 style="padding-top: 20px; padding-left: 40px;">Why is Goal 15 Important?</h3>
+    <p>It is vital for protecting nature, preserving biodiversity, and ensuring a sustainable future. By safeguarding forests, ecosystems, and wildlife, we maintain a healthy planet with clean air, water, and fertile soil. Goal 15 tackles deforestation, climate change, and habitat loss, promoting sustainable practices that benefit both nature and humans. To create a sustainable future for the next generations to come, the targets of Goal 15 must be met.</p>
+    <hr class="solid">
+</div>
+
+<!-- Image and caption section -->
+<div id="graph">
+  <img src="goal15graph.png" width = "1140" height = "640" style="padding-left: 250px; padding-top: 50px;">
+  <h4 style="text-align: center;">This graph shows the number of threatened plant species around the world in 2016</h4>
+  <hr class="solid">
+  <h2 style="text-align: center; margin-top:30px;">Facts about life on land</h2>
+</div>
+
+<!-- Fact box section -->
+<div id="fact-box">
+  <img id="fact-image" src="" alt="Land Image">
+  <p id="fact-text"></p>
+  <button id="new-fact-button">Generate New Fact</button>
+  <a id="source-link" href="" target="_blank">Source</a>
+</div>
+
+<!-- Footer section -->
+<footer>
+  <p>Karan Maheshwari Y9 Coding Project</p>
+</footer>
+
+<!-- JavaScript code -->
+<script>
+  // Array of facts about life on land
+  var waterFacts = [
+    {
+      text: "10 million hectares of forest are destroyed every year",
+      image: "15fact1.jpeg",
+      source: "https://sdgs.un.org/goals/goal15"
+    },
+    {
+      text: "Around 40,000 species are documented to be at risk of extinction",
+      image: "15fact2.jpeg",
+      source: "https://sdgs.un.org/goals/goal15"
+    },
+    {
+      text: "Approximately 80 percent of the decline in global biological diversity is caused by habitat destruction",
+      image: "15fact3.jpeg",
+      source: "https://www.animalmatters.org/facts/wildlife/"
+    },
+    {
+      text: "Wildlife habitat in the world is being destroyed at a rate of approximately 5,760 acres per day",
+      image: "15fact4.1",
+      source: "https://www.animalmatters.org/facts/wildlife/"
+    },
+    {
+      text: "There were once dozens of rhinoceros species. Now only five remain",
+      image: "15fact5.jpeg",
+      source: "https://www.animalmatters.org/facts/wildlife/"
+    },
+  ];
+
+  // Get DOM elements
+  var factBox = document.getElementById("fact-box");
+  var factImage = document.getElementById("fact-image");
+  var factText = document.getElementById("fact-text");
+  var sourceLink = document.getElementById("source-link");
+  var newFactButton = document.getElementById("new-fact-button");
+
+  // Function to generate a random fact
+  function getRandomFact() {
+    var randomFact = waterFacts[Math.floor(Math.random() * waterFacts.length)];
+
+    // Update fact box content
+    factImage.src = randomFact.image;
+    factText.textContent = randomFact.text;
+    sourceLink.href = randomFact.source;
+  }
+
+  // Generate initial fact
+  getRandomFact();
+
+  // Add event listener to generate a new fact when the button is clicked
+  newFactButton.addEventListener("click", getRandomFact);
+</script>
+</body>
+</html>

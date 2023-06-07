@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UNSDG</title>
+<link rel="shortcut icon" type="image/png" href="unsdg_1.png"/>
+
+<!-- Meta tag for responsive design -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+/* CSS styles for the page layout and elements */
+body {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 0;
+}
+
+.sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #818181;
+}
+
+#main {
+  margin-left: 300px;
+  padding: 16px;
+}
+
+#main h1 {
+  text-align: center;
+}
+
+#main h2 {
+  text-align: center;
+  font-weight: normal;
+}
+
+hr.solid {
+  border-top: 1px solid #000000;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+#quiz-box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#quiz-box img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+#quiz-box p {
+    font-size: 16px;
+}
+
+#quiz-box input[type="radio"] {
+    margin: 10px;
+}
+
+#quiz-box button {
+    margin-top: 10px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Sidebar section -->
+<div id="mySidebar" class="sidebar">
+  <a href="goal14.html">Goal 14</a>
+  <a href="goal15.html">Goal 15</a>
+  <a href="quiz.html">Quiz</a>
+  <a href="comparison.html">Comparison</a>
+  <a href="action.html">Action</a>
+</div>
+
+<!-- Image container section -->
+<a href="https://sdgs.un.org/goals/goal14" target="_blank">
+  <div id="image-container">
+      <img src="unsdg_1.png" alt="Image" width="50" height="50">
+  </div>
+</a>
+
+<!-- Main content section -->
+<div id="main">
+    <h1>Quiz</h1>
+    <h2>A Short Quiz To See What You Learnt</h2>
+    <hr class="solid">
+    
+    <!-- Quiz box section -->
+    <div id="quiz-box">
+        <img id="fact-image" src="">
+        <p id="fact-text"></p>
+        
+        <!-- Quiz form section -->
+        <form id="quiz-form">
+          <label><input type="radio" name="answer" value="true"> True</label>
+          <label><input type="radio" name="answer" value="false"> False</label>
+        </form>
+        
+        <button id="check-answer-button">Check Answer</button>
+        <p id="result-text"></p>
+        <button id="new-fact-button">Next Fact</button>
+      </div>
+    
+      <script>
+        // Quiz data
+        var waterFacts = [
+          {
+            text: "The ocean is Earth's largest ecosystem",
+            image: "14fact1.avif",
+            answer: "true"
+          },
+          {
+            text: "The ocean absorbs 1/4 of global annual CO2 emmisions",
+            image: "14fact2.png",
+            answer: "true"
+          },
+          {
+            text: "17+ million metric tons of plastic entered the ocean in 2021",
+            image: "14fact3.webp",
+            answer: "true"
+          },
+          {
+            text: "Each year 1.2 trillion gallons of untreated sewage, storm water, and industrial waste are dumped into US water",
+            image: "14fact4.jpeg",
+            answer: "true"
+          },
+          {
+            text: "Approximately 40% of the lakes in America are too polluted for fishing, aquatic life, or swimming",
+            image: "14fact5.webp",
+            answer: "true"
+          },
+          {
+            text: "10 million hectares of forest are destroyed every year",
+            image: "15fact1.jpeg",
+            answer: "true"
+          },
+          {
+            text: "Around 40,000 species are documented to be at risk of extinction",
+            image: "15fact2.jpeg",
+            answer: "true"
+          },
+          {
+            text: "Approximately 80 percent of the decline in global biological diversity is caused by habitat destruction",
+            image: "15fact3.jpeg",
+            answer: "true"
+          },
+          {
+            text: "Wildlife habitat in the world is being destroyed at a rate of approximately 5,760 acres per day",
+            image: "15fact4.1",
+            answer: "true"
+          },
+          {
+            text: "There were once dozens of rhinoceros species. Now only five remain",
+            image: "15fact5.jpeg",
+            answer: "true"
+          },
+        ];
+    
+        // Get DOM elements
+        var quizBox = document.getElementById("quiz-box");
+        var factImage = document.getElementById("fact-image");
+        var factText = document.getElementById("fact-text");
+        var quizForm = document.getElementById("quiz-form");
+        var checkAnswerButton = document.getElementById("check-answer-button");
+        var resultText = document.getElementById("result-text");
+        var newFactButton = document.getElementById("new-fact-button");
+    
+        var currentFactIndex = -1;
+    
+        // Function to load the next fact in the quiz
+        function loadNextFact() {
+          currentFactIndex++;
+    
+          // Check if all facts have been displayed
+          if (currentFactIndex >= waterFacts.length) {
+            factImage.src = "";
+            factText.textContent = "Congratulations! You have completed the quiz.";
+            quizForm.style.display = "none";
+            checkAnswerButton.style.display = "none";
+            newFactButton.style.display = "none";
+            return;
+          }
+    
+          var fact = waterFacts[currentFactIndex];
+    
+          // Update the fact image and text
+          factImage.src = fact.image;
+          factText.textContent = fact.text;
+    
+          // Reset the quiz form and result text
+          quizForm.reset();
+          resultText.textContent = "";
+        }
+    
+        // Function to check the selected answer
+        function checkAnswer() {
+          var selectedAnswer = quizForm.elements["answer"].value;
+          var currentFact = waterFacts[currentFactIndex];
+    
+          // Compare the selected answer with the correct answer
+          if (selectedAnswer === currentFact.answer) {
+            resultText.textContent = "Correct!";
+            resultText.style.color = "green";
+          } else {
+            resultText.textContent = "Incorrect!";
+            resultText.style.color = "red";
+          }
+        }
+    
+        // Initial load of the first fact
+        loadNextFact();
+    
+        // Event listener for the next fact button
+        newFactButton.addEventListener("click", loadNextFact);
+    
+        // Event listener for the check answer button
+        checkAnswerButton.addEventListener("click", checkAnswer);
+      </script>
+<footer>
+  <p>Karan Maheshwari Y9 Coding Project</p>
+</footer>
+</body>
+</html>
